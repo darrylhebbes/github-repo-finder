@@ -17,3 +17,10 @@ a {
 .masthead h3 {
     color: #EEE;
 }
+
+.loading {
+    color: #006699;
+}
+.warn {
+    color: #800000;
+}

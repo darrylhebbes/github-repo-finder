@@ -43,19 +43,23 @@ class ResultContainer extends Component {
         const msgMap = {
             start: {
                 headerMsg: 'Welcome',
-                bodyMsg: 'Please enter a username to start searching for Github repos!'
+                bodyMsg: 'Please enter a username to start searching for Github repos!',
+                msgColor:''
             },
             loading: {
                 headerMsg: 'Just one second',
-                bodyMsg: 'Finding the user...'
+                bodyMsg: 'Finding the user...',
+                msgColor:'loading'
             },
             noRepositories: {
                 headerMsg: 'Github user has no repos',
-                bodyMsg: 'User has perhaps not created any public repositories'
+                bodyMsg: 'User has perhaps not created any public repositories',
+                msgColor:'warn'
             },
             noResponse: {
                 headerMsg: 'Github API does not respond',
-                bodyMsg: 'We\'re sorry please try again later.'
+                bodyMsg: 'We\'re sorry please try again later.',
+                msgColor:'warn'
             }
         };
 
