@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import emitter from '../emitter';
 
 class Search extends Component {
     state = {
@@ -10,10 +11,13 @@ class Search extends Component {
         this.setState({searchTerm: term});
 
         if (term.length > 2) {
-            // Search
+            this.emitSearch();
         }
     }
 
+    emitSearch = () => {
+        emitter.emit('search', this.state);
+    }
     
     handleKeyUp = (evt) => {
         const ENTER_KEY_CODE = 13;
