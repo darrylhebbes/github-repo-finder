@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import reqwest from 'reqwest';
 import emitter from '../emitter';
+import Message from './Message';
+import List from './List';
 
 class ResultContainer extends Component {
 
@@ -28,7 +30,7 @@ class ResultContainer extends Component {
                 .fail(err => this.setState({ type: 'noResponse' }));
         });
 
-        emitter.emit('search', this.state);
+        //emitter.emit('search', this.state);
     }
 
     componentWillUnmount() { 
@@ -37,9 +39,6 @@ class ResultContainer extends Component {
 
     mainRender = () => {
         const { type, response } = this.state;
-
-        console.log('response', response);
-
         const msgMap = {
             start: {
                 headerMsg: 'Welcome',
@@ -72,9 +71,7 @@ class ResultContainer extends Component {
     };
 
     render() {
-        return (
-                <div>{this.mainRender()}</div>
-        );
+        return (<div>{this.mainRender()}</div>);
     }
 }
 
