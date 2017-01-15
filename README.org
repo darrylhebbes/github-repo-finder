@@ -1,0 +1,15 @@
+
+* Github User Repo Finder
+** Coding challenge
+
+*** Implementation
+1) Build system based on Node.js
+2) Uses Babel to transpile ES6 to ES5 capable code
+
+
+**** How to run
+1. type "npm install"
+2. type "npm run start"
+ A bowser should open to show "http://localhost:3000"
+
+
