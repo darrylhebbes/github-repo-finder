@@ -14,7 +14,7 @@ class ResultContainer extends Component {
     }
 
     componentDidMount() {
-        emitter.on('search', ({ searchTerm }) => {
+        emitter.on('search', ({ searchTerm, isHideForkedRepos }) => {
             this.setState({ type: 'searching' });
             reqwest({
                 url: `https://api.github.com/users/${searchTerm}/repos`,
@@ -22,15 +22,25 @@ class ResultContainer extends Component {
                 crossOrigin: true
             })
                 .then(response => {
-                    this.setState({ response: {
-                        results: JSON.parse(response.response), 
-                        resultCount: JSON.parse(response.response).length}, 
-                        type: JSON.parse(response.response).length || 'noRepositories' });
-                })
-                .fail(err => this.setState({ type: 'noResponse' }));
-        });
+                    let data = JSON.parse(response.response);
+                    let responseData = {};
+                    if (isHideForkedRepos){
+                        responseData = data.filter(function(d) { return d.fork === false; });
+                    } else {
+                        responseData = data;
+                    }
 
-        //emitter.emit('search', this.state);
+                    this.setState({ response: {
+                        results: responseData, 
+                        resultCount: responseData.length}, 
+                        type: responseData.length || 'noRepositories' });
+                })
+                .fail(err => {
+                    console.log('err', err);
+                    this.setState({ type: 'noResponse' })
+                    }
+                );
+        });
     }
 
     componentWillUnmount() { 
@@ -67,6 +77,7 @@ class ResultContainer extends Component {
         if (msg) {
             return (<Message {...msg} />);
         }
+
         return (<List {...response} />);
     };
 

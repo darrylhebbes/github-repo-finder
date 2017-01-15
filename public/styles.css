@@ -24,3 +24,7 @@ a {
 .warn {
     color: #800000;
 }
+
+.bg-blue {
+    background-color: #0079d1 !important;
+}
