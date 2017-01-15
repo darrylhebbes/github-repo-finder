@@ -6,9 +6,8 @@ class MastHead extends Component {
         return (
             <header className="masthead clearfix">
               <div className="clearfix">
-                <div className="sm-col sm-col-2 "><img alt="" className="fit m2" src="../../public/github-developer-logo.svg"/></div>
-                <div className="sm-col sm-col-10 ">
-                </div>
+                <div className="sm-col sm-col-4 "><img alt="" className="fit m2" src="../../public/github.svg"/></div>
+                <div className="sm-col sm-col-8 "><h3>User Repo Finder</h3></div>
               </div>     
             </header>
         );

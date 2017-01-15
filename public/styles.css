@@ -8,3 +8,12 @@ body {
 a {
     text-decoration: none;
 }
+
+.masthead {
+    background-color: #3c4146;
+    border-bottom-color: #202326;
+}
+
+.masthead h3 {
+    color: #EEE;
+}

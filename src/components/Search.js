@@ -30,7 +30,7 @@ class Search extends Component {
         className="search-box mt3 mb3"
         onChange={this.handleChange}
         onKeyUp={this.handleKeyUp}
-        placeholder="Type a module name"
+        placeholder="Type a user name"
         value={this.state.searchTerm}
             />
     }
