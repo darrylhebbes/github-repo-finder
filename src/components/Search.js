@@ -30,29 +30,26 @@ class Search extends Component {
         if(evt.keyCode === ENTER_KEY_CODE) this.emitSearch();
     }
     
-    handleClick = (evt) => {
-        this.emitSearch();
-    }
-    
     render() {
         const { isHideForkedRepos } = this.state;
 
-        return <span><input
+        return <div className="p2 center bg-blue searchBar">
+            <h2>User Repo Finder</h2>
+            <input
         type="text"
-        className="search-box mt3 mb3"
+        className="search-box mt1 p1"
         onChange={this.handleChange}
         onKeyUp={this.handleKeyUp}
         placeholder="Type a user name"
         value={this.state.searchTerm}
-            />
-            <button onClick={this.handleClick}>Search</button>
-            <label>   <input
-                       type="checkbox"
-                       value={this.state.isHideForkedRepos}
-                       checked={isHideForkedRepos}
-                       onChange={this.toggleCheckboxChange}
-            /> Exclude repositories the user has forked</label>
-            </span>
+            /><br/>
+            <label><input
+        type="checkbox"
+        value={this.state.isHideForkedRepos}
+        checked={isHideForkedRepos}
+        onChange={this.toggleCheckboxChange}
+            /> Hide forked repositories</label>
+            </div>
     }
 }
 

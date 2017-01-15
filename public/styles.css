@@ -24,7 +24,29 @@ a {
 .warn {
     color: #800000;
 }
-
+.searchBar {
+    color: #EEE;
+}
+.searchBar h2 {
+    font-size: 1.9rem;
+    font-weight: normal;
+    padding: 0px;
+    border: none;
+    margin: 0;
+}
+.searchBar label {
+    font-size: 0.8rem;
+}
+.searchBar input[type='text'] {
+    font-size: 1.4rem;
+    border: none;
+}
+.searchBar button {
+    font-size: 1rem;
+    padding: 12px;
+    border: none;
+    margin: 0;
+}
 .bg-blue {
     background-color: #0079d1 !important;
 }
