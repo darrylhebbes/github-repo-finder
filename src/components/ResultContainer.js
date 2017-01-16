@@ -55,9 +55,9 @@ class ResultContainer extends Component {
                 bodyMsg: 'Please enter a username to start searching for Github repos!',
                 msgColor:''
             },
-            loading: {
+            searching: {
                 headerMsg: 'Just one second',
-                bodyMsg: 'Finding the user...',
+                bodyMsg: 'Looking for the username...',
                 msgColor:'loading'
             },
             noRepositories: {

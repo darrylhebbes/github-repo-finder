@@ -39,7 +39,8 @@ a {
 }
 .searchBar input[type='text'] {
     font-size: 1.4rem;
-    border: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
 }
 .searchBar button {
     font-size: 1rem;
@@ -47,6 +48,12 @@ a {
     border: none;
     margin: 0;
 }
+.searchBar .small {
+    font-size: 0.7rem;
+}
 .bg-blue {
     background-color: #0079d1 !important;
 }
+.listItem {    background-color: #eee !important;}
+.listItem .itemDetails {color: #aaa}
+.listItem .itemDetails span {color: #000}

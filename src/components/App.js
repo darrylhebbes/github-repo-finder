@@ -7,11 +7,11 @@ class App extends Component {
     
     render () {
         return (
-                <div>
-                <MastHead />
-                <Search />
-                <ResultContainer />
-                </div>
+            <div>
+              <MastHead />
+              <Search />
+              <ResultContainer />
+            </div>
         );
     }
 };

@@ -15,10 +15,9 @@ class Search extends Component {
     toggleCheckboxChange = () => {
         this.setState(({ isHideForkedRepos }) => (
             {
-                isHideForkedRepos: !isHideForkedRepos,
+                isHideForkedRepos: !isHideForkedRepos
             }
         ));
-
     }
 
     emitSearch = () => {
@@ -35,6 +34,7 @@ class Search extends Component {
 
         return <div className="p2 center bg-blue searchBar">
             <h2>User Repo Finder</h2>
+
             <input
         type="text"
         className="search-box mt1 p1"
@@ -43,13 +43,14 @@ class Search extends Component {
         placeholder="Type a user name"
         value={this.state.searchTerm}
             /><br/>
+            <div className="small">Press "Enter" key to search</div>
             <label><input
         type="checkbox"
         value={this.state.isHideForkedRepos}
         checked={isHideForkedRepos}
         onChange={this.toggleCheckboxChange}
             /> Hide forked repositories</label>
-            </div>
+            </div>;
     }
 }
 
