@@ -31,6 +31,7 @@ class ResultContainer extends Component {
                     }
 
                     this.setState({ response: {
+                        searchedTerm: searchTerm, 
                         results: responseData, 
                         resultCount: responseData.length}, 
                         type: responseData.length || 'noRepositories' });
