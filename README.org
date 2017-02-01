@@ -1,5 +1,5 @@
-* Github User Repo Finder
-Uses the Github APIto allow for finding the repositories of users.
+* ReactJS Github User Repository Finder
+Uses the Github API to allow for finding the repositories of users.
 
 ** Implementation
 1) Build system based on Node.js
